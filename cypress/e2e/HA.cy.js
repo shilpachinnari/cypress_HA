@@ -51,9 +51,9 @@ describe('Bright HR tests in page',() =>{ //the start of describe brackets
       cy.wait(2000);
     }
 
-    fillNewEmployee('Joe','aa');
+    fillNewEmployee('Joe','aaaa');
       cy.get('button').contains('Add another employee').click();
-      fillNewEmployee('Jane','ab');
+      fillNewEmployee('Jane','aaab');
       cy.get('[aria-label="Close modal"]').click();
       //Employees exist on employee tab
       cy.get(':nth-child(1) > .h-full > .flex-col > .text-base').should('have.text', 'Joe aaaa');
@@ -70,6 +70,7 @@ describe('Bright HR tests in page',() =>{ //the start of describe brackets
           cy.get('button').contains("Return to employee hub").click();
         }
         deleteFirstByName("Joe");
+
         deleteFirstByName("Jane");
 
   })
