@@ -12,9 +12,8 @@ function login()
   cy.get('.flex-row > .rounded').click();
 }
 
-describe('Bright HR tests in page',() =>{ //the start of describe brackets
-  //essentially "describe" wraps a series of "it"s and each "it" is a stand alone test :) 
-  // so "describe" is often used for a "test suite"
+describe('Bright HR tests in page',() =>{ 
+  //the start of describe brackets
 
   it('can login',() =>
     {
